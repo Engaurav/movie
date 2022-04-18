@@ -1,38 +1,91 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  place-content: center;
+  margin-top: 70px;
+}
+.ipod-container{
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: lightgray;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
+  border-radius: 1rem;
+}
+.ipod-display{
+  background-image: url('https://cdn.create.vista.com/api/media/small/347767571/stock-photo-top-view-paper-cut-notes');
+  height: 20rem;
+  width: 20rem;
+  border: solid 2px;
+  border-radius: 8px;
+  transition: all ease-in-out 0.5s;
+}
+
+.wheel-container{
+  margin-top: 5px;
+  width: 100%;
+  height: 14rem;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#rotate-container{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+#rotatable {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#menu{
+  position: absolute;
+  margin-top: -136px;
+  border: none;
+  color: black;
+  font-size: large;
+}
+#previous{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: -70px;
+}
+#next{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: 70px;
+}
+#play-pause{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin-top: 70px;
+}
+.wheel-button{
+  height: 6rem;
+  width: 6rem;
+  background-color: grey;
+  border-radius: 50%;
+}
+#interaction {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
 }
